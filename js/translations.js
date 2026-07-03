@@ -12,6 +12,13 @@ const TRANSLATIONS = {
     skip: { tekst: "Ga naar de inhoud" },
     header: { brand: "Ons huis in Heiloo", menuOpenLabel: "Menu openen" },
     langSwitcher: { ariaLabel: "Taal kiezen" },
+    wachtwoordScherm: {
+      titel: "Voer de code in",
+      label: "Toegangscode",
+      placeholder: "Voer de code in",
+      knop: "Bevestigen",
+      fout: "Onjuiste code, probeer het opnieuw."
+    },
     nav: {
       ariaLabel: "Secties in de handleiding",
       welkom: "Welkom",
@@ -169,6 +176,13 @@ const TRANSLATIONS = {
     skip: { tekst: "Skip to content" },
     header: { brand: "Our home in Heiloo", menuOpenLabel: "Open menu" },
     langSwitcher: { ariaLabel: "Choose language" },
+    wachtwoordScherm: {
+      titel: "Enter the code",
+      label: "Access code",
+      placeholder: "Enter the code",
+      knop: "Confirm",
+      fout: "Incorrect code, please try again."
+    },
     nav: {
       ariaLabel: "Sections in the guide",
       welkom: "Welcome",
@@ -326,6 +340,13 @@ const TRANSLATIONS = {
     skip: { tekst: "Zum Inhalt springen" },
     header: { brand: "Unser Haus in Heiloo", menuOpenLabel: "Menü öffnen" },
     langSwitcher: { ariaLabel: "Sprache wählen" },
+    wachtwoordScherm: {
+      titel: "Code eingeben",
+      label: "Zugangscode",
+      placeholder: "Code eingeben",
+      knop: "Bestätigen",
+      fout: "Falscher Code, bitte versuche es erneut."
+    },
     nav: {
       ariaLabel: "Abschnitte der Anleitung",
       welkom: "Willkommen",

@@ -1,6 +1,49 @@
 (function () {
   'use strict';
 
+  // ===== Wachtwoordscherm =====
+  var ONTGRENDEL_SLEUTEL = 'gastenhandleiding-ontgrendeld-code';
+  var wachtwoordScherm = document.getElementById('wachtwoordScherm');
+  var siteInhoud = document.getElementById('siteInhoud');
+  var wachtwoordForm = document.getElementById('wachtwoordForm');
+  var wachtwoordVeld = document.getElementById('wachtwoordVeld');
+  var wachtwoordFout = document.getElementById('wachtwoordFout');
+
+  function ontgrendel() {
+    wachtwoordScherm.hidden = true;
+    siteInhoud.hidden = false;
+  }
+
+  // Al eerder deze code ingevoerd op dit apparaat? Dan niet opnieuw vragen.
+  // Verandert de TOEGANGSCODE (bijvoorbeeld voor een nieuwe boeking), dan
+  // klopt de opgeslagen waarde niet meer en moet de nieuwe gast wel weer
+  // de code invoeren.
+  try {
+    if (typeof TOEGANGSCODE !== 'undefined' && localStorage.getItem(ONTGRENDEL_SLEUTEL) === TOEGANGSCODE) {
+      ontgrendel();
+    }
+  } catch (fout) {
+    // localStorage kan geblokkeerd zijn (bv. privénavigatie); dan gewoon elke keer de code vragen.
+  }
+
+  wachtwoordForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    if (typeof TOEGANGSCODE !== 'undefined' && wachtwoordVeld.value === TOEGANGSCODE) {
+      try {
+        localStorage.setItem(ONTGRENDEL_SLEUTEL, TOEGANGSCODE);
+      } catch (fout) {
+        // Niet erg als dit niet lukt; de gast moet de code dan de volgende keer opnieuw invoeren.
+      }
+      wachtwoordFout.hidden = true;
+      ontgrendel();
+    } else {
+      wachtwoordFout.hidden = false;
+      wachtwoordVeld.value = '';
+      wachtwoordVeld.focus();
+    }
+  });
+
   // ===== Taal / vertalingen =====
   var STANDAARD_TAAL = 'nl';
   var huidigeTaal = STANDAARD_TAAL;
