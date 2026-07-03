@@ -1,4 +1,4 @@
-const CACHE_NAAM = 'gastenhandleiding-v2';
+const CACHE_NAAM = 'gastenhandleiding-v3';
 
 const KERN_BESTANDEN = [
   './',
@@ -36,38 +36,41 @@ self.addEventListener('activate', function (event) {
   self.clients.claim();
 });
 
+// Netwerk-eerst: online krijg je altijd de laatste versie van de site.
+// Alleen als het netwerk niet lukt (geen verbinding) valt de site terug
+// op wat er de vorige keer is gecachet, zodat de handleiding ook
+// offline beschikbaar blijft.
 self.addEventListener('fetch', function (event) {
   if (event.request.method !== 'GET') {
     return;
   }
 
   event.respondWith(
-    caches.match(event.request).then(function (cacheResponse) {
-      if (cacheResponse) {
-        return cacheResponse;
-      }
-
-      return fetch(event.request)
-        .then(function (netwerkResponse) {
-          if (
-            netwerkResponse &&
-            netwerkResponse.status === 200 &&
-            (event.request.url.startsWith(self.location.origin) ||
-              event.request.url.includes('fonts.googleapis.com') ||
-              event.request.url.includes('fonts.gstatic.com'))
-          ) {
-            var kopie = netwerkResponse.clone();
-            caches.open(CACHE_NAAM).then(function (cache) {
-              cache.put(event.request, kopie);
-            });
+    fetch(event.request)
+      .then(function (netwerkResponse) {
+        if (
+          netwerkResponse &&
+          netwerkResponse.status === 200 &&
+          (event.request.url.startsWith(self.location.origin) ||
+            event.request.url.includes('fonts.googleapis.com') ||
+            event.request.url.includes('fonts.gstatic.com'))
+        ) {
+          var kopie = netwerkResponse.clone();
+          caches.open(CACHE_NAAM).then(function (cache) {
+            cache.put(event.request, kopie);
+          });
+        }
+        return netwerkResponse;
+      })
+      .catch(function () {
+        return caches.match(event.request).then(function (cacheResponse) {
+          if (cacheResponse) {
+            return cacheResponse;
           }
-          return netwerkResponse;
-        })
-        .catch(function () {
           if (event.request.mode === 'navigate') {
             return caches.match('./index.html');
           }
         });
-    })
+      })
   );
 });
