@@ -1,6 +1,67 @@
 (function () {
   'use strict';
 
+  // ===== Taal / vertalingen =====
+  var STANDAARD_TAAL = 'nl';
+  var huidigeTaal = STANDAARD_TAAL;
+  var langKnoppen = document.querySelectorAll('.lang-btn');
+
+  function waardeUitPad(object, pad) {
+    return pad.split('.').reduce(function (deel, sleutel) {
+      return deel && deel[sleutel] !== undefined ? deel[sleutel] : undefined;
+    }, object);
+  }
+
+  function toepassenTaal(taal) {
+    var dict = (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[taal]) ? TRANSLATIONS[taal] : TRANSLATIONS[STANDAARD_TAAL];
+    huidigeTaal = (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[taal]) ? taal : STANDAARD_TAAL;
+
+    document.documentElement.setAttribute('lang', huidigeTaal);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var sleutel = el.getAttribute('data-i18n');
+      var waarde = waardeUitPad(dict, sleutel);
+      if (waarde === undefined) {
+        return;
+      }
+      var attr = el.getAttribute('data-i18n-attr');
+      if (attr) {
+        el.setAttribute(attr, waarde);
+      } else {
+        el.innerHTML = waarde;
+      }
+    });
+
+    document.title = dict.meta.title;
+    var metaDesc = document.getElementById('metaDescription');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', dict.meta.description);
+    }
+
+    langKnoppen.forEach(function (knop) {
+      var actief = knop.getAttribute('data-lang') === huidigeTaal;
+      knop.classList.toggle('actief', actief);
+      knop.setAttribute('aria-pressed', actief ? 'true' : 'false');
+    });
+
+    try {
+      sessionStorage.setItem('gastenhandleiding-taal', huidigeTaal);
+    } catch (fout) {
+      // Privénavigatie kan sessionStorage blokkeren; taal onthouden is dan niet mogelijk.
+    }
+
+    // Eerder gemarkeerde zoekresultaten horen bij de vorige taal, dus opnieuw beginnen.
+    verwijderHighlights();
+    zoekveld.value = '';
+    zoekresultaat.textContent = '';
+  }
+
+  langKnoppen.forEach(function (knop) {
+    knop.addEventListener('click', function () {
+      toepassenTaal(knop.getAttribute('data-lang'));
+    });
+  });
+
   // ===== Hamburgermenu =====
   var hamburger = document.getElementById('hamburgerBtn');
   var navWrap = document.getElementById('hoofdnavigatie');
@@ -82,6 +143,7 @@
     zoekTimer = setTimeout(function () {
       verwijderHighlights();
       var term = zoekveld.value.trim().toLowerCase();
+      var dict = TRANSLATIONS[huidigeTaal] || TRANSLATIONS[STANDAARD_TAAL];
 
       if (term.length < 2) {
         zoekresultaat.textContent = '';
@@ -91,7 +153,7 @@
       highlightTekst(term);
 
       if (huidigeHighlights.length > 0) {
-        zoekresultaat.textContent = huidigeHighlights.length + ' resultaat/resultaten gevonden';
+        zoekresultaat.textContent = dict.search.resultsFound.replace('{n}', huidigeHighlights.length);
         var eersteResultaat = huidigeHighlights[0];
         var menuWasOpen = navWrap.classList.contains('open');
 
@@ -106,10 +168,19 @@
           eersteResultaat.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, menuWasOpen ? 320 : 0);
       } else {
-        zoekresultaat.textContent = 'Geen resultaten gevonden';
+        zoekresultaat.textContent = dict.search.noResults;
       }
     }, 250);
   });
+
+  // ===== Taal initialiseren (onthouden zolang de gebruiker op de site blijft) =====
+  var opgeslagenTaal = null;
+  try {
+    opgeslagenTaal = sessionStorage.getItem('gastenhandleiding-taal');
+  } catch (fout) {
+    opgeslagenTaal = null;
+  }
+  toepassenTaal(opgeslagenTaal || STANDAARD_TAAL);
 
   // ===== Service worker voor offline gebruik =====
   if ('serviceWorker' in navigator) {

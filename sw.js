@@ -1,9 +1,10 @@
-const CACHE_NAAM = 'gastenhandleiding-v1';
+const CACHE_NAAM = 'gastenhandleiding-v2';
 
 const KERN_BESTANDEN = [
   './',
   './index.html',
   './css/style.css',
+  './js/translations.js',
   './js/script.js',
   './fotos/foto-tuin.jpg',
   './fotos/foto-woonkamer.jpg'
