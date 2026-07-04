@@ -1,4 +1,4 @@
-const CACHE_NAAM = 'gastenhandleiding-v4';
+const CACHE_NAAM = 'gastenhandleiding-v5';
 
 const KERN_BESTANDEN = [
   './',

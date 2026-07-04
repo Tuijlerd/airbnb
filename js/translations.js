@@ -60,7 +60,7 @@ const TRANSLATIONS = {
 
     aankomst: {
       p1: "Bij aankomst loop je door de poortdeur aan de rechterkant van het huis, waar je de sleutelkluis vindt. De precieze locatie en toegangscode van de sleutelkluis ontvang je apart en persoonlijk van ons, kort voor je aankomst.",
-      p2: "In de sleutelkluis vind je de sleutel van de achterdeur. Dit is de ingang die wij zelf altijd gebruiken. Dezelfde sleutel werkt ook voor de twee klapdeuren vanuit de woonkamer naar de tuin. Bij binnenkomst ligt er op tafel nog een tweede sleutel als reserve.",
+      p2: "In de sleutelkluis vind je de sleutels van de voordeur en de achterdeur. De achterdeur is de ingang die wij zelf altijd gebruiken; die sleutel werkt ook voor de twee klapdeuren vanuit de woonkamer naar de tuin. Bij binnenkomst ligt er op tafel nog een tweede sleutel als reserve.",
       p3: "In de straat kun je gratis parkeren. Zijn alle plekken bezet, wat vooral 's avonds kan voorkomen? Dan parkeren wij zelf op de grote parkeerplaats aan het einde van de straat, rechts vóór het spoor. Daar vind je ook meerdere oplaadpunten voor elektrische auto's."
     },
 
@@ -111,21 +111,22 @@ const TRANSLATIONS = {
     verwarming: {
       p1: "<strong>Thermostaat</strong> — hangt in de woonkamer, rechts van de schuifdeuren. De temperatuur lees je af op het display en stel je in met de pijltjestoetsen.",
       p2: "<strong>Ventilatoren</strong> — op elke slaapkamer staat een ventilator. Op de kinderkamers vind je er een met vier knoppen achterop voor aan/uit en de verschillende standen.",
-      p3: "In de master bedroom staat een <strong>Duux Whisper 3</strong>. Deze bedien je via de knoppen op de voet of via de afstandsbediening op het nachtkastje. Hij heeft 26 snelheidsstanden (instelbaar via de draaiknop op de voet), een natuurlijke windstand die een buitenbries nabootst, en een timerfunctie tot 12 uur. De ventilator kan zowel horizontaal als verticaal draaien voor een optimale luchtverdeling."
+      p3: "In de master bedroom staat een <strong>Duux Whisper 3</strong>. Deze bedien je via de knoppen op de voet of via de afstandsbediening op het nachtkastje. Hij heeft 26 snelheidsstanden (instelbaar via de draaiknop op de voet), een natuurlijke windstand die een buitenbries nabootst, en een timerfunctie tot 12 uur. De ventilator kan zowel horizontaal als verticaal draaien voor een optimale luchtverdeling.",
+      p4: "<strong>Openhaard</strong> — in de woonkamer staat een gashaard. Let op: de haard wordt erg warm, ook het glas — kom hier niet aan. In de zomer is de haard al snel te warm om te gebruiken. De afstandsbediening ligt bovenop de schouw. Houd de aan/uit-knop een paar seconden ingedrukt totdat de haard piept; daarna duurt het nog enkele seconden voordat de vlam zichtbaar is."
     },
 
     tuin: {
-      p1: "<strong>Planten</strong> — zie je dat een plant water nodig heeft, geef gerust water. Er staat een gieter in of naast de schuur. De bamboe rechtsachterin kan altijd wel wat water gebruiken. Geef je geen water? Ook geen probleem.",
+      p1: "<strong>Planten</strong> — zie je dat een plant water nodig heeft, geef gerust water. Er staat een gieter in of naast de schuur. Geef je geen water? Ook geen probleem.",
       p2: "<strong>Buitenverlichting</strong> — de verlichting aan de zijkant van het huis, bij de voordeur en op de schuur werkt automatisch en schakelt vanzelf in en uit. De sfeerverlichting langs de tuin bedien je zelf: in de schuur, direct links bij de ingang, steek je de stekker in het stopcontact om de verlichting aan te doen en trek je hem eruit om hem uit te doen.",
       p3: "<strong>Tuinmeubilair</strong> — op de veranda vind je een volledige eethoek om ook buiten te eten, en een witte bank om in de avondzon te genieten, met kussens en dekentjes voor buiten. Bij slecht weer blijft alles droog, dus je hoeft niets af te halen. We vragen je de witte bank op zijn plek te laten staan; komt er een vlek op, behandel deze dan snel met de vlekkenmiddelen uit de keuken. Het overige tuinmeubilair mag je vrij verplaatsen en gebruiken. De tuin heeft ook een kinderhuisje met extra speelgoed.",
-      p4: "<strong>Fietsen</strong> — alle fietsen zijn beschikbaar, de sleutels liggen op tafel bij binnenkomst. Er is een elektrische damesfiets met kinderzitje achterop: activeer hem met de knop rechtsboven op het bedieningspaneel en stel met de + en - knoppen het ondersteuningsniveau in. De actieradius is ongeveer 15–20 km, dus laad de batterij op voor vertrek (de oplader ligt rechts op het werkblad in de schuur — sluit hem het liefst een avond van tevoren aan, want hij laadt langzaam). Verder zijn er een gewone damesfiets, een herenfiets, een mountainbike voor kinderen van 7–12 jaar en een meisjesfiets voor kinderen van 5–7 jaar."
+      p4: "<strong>Fietsen</strong> — alle fietsen zijn beschikbaar, de sleutels liggen op tafel bij binnenkomst. Er is een elektrische damesfiets met kinderzitje achterop: activeer hem met de knop rechtsboven op het bedieningspaneel en stel met de + en - knoppen het ondersteuningsniveau in. De actieradius is ongeveer 15–20 km, dus laad de batterij op voor vertrek (de oplader ligt rechts op het werkblad in de schuur — sluit hem het liefst een avond van tevoren aan, want hij laadt langzaam). Verder zijn er een gewone damesfiets, een herenfiets, een mountainbike voor kinderen van 7–12 jaar en een meisjesfiets voor kinderen van 4–6 jaar."
     },
 
     praktisch: {
       p1: "<strong>Meterkast</strong> — bevindt zich in de hal, rechts van de voordeur, in de witte kast. Is er een stop doorgeslagen? Dan staat de betreffende zwarte schakelaar naar beneden — klik hem omhoog om de groep te herstellen.",
       p2: "<strong>Schoonmaakspullen</strong> — staan in de keuken (middelste la, onderop): schoonmaakmiddel voor vloer, keuken en wc, en stoffer/blik. Gebruik vooral wat je nodig hebt. In de kelder vind je emmer en dweil.",
       p3: "<strong>Gereedschap</strong> — in de schuur vind je rechts een groot werkblad met lades. In de bovenste rechterlade ligt een set basisgereedschap.",
-      p4: "<strong>Speelgoed &amp; strandspullen</strong> — op de kinderslaapkamers, in het speelhuisje en in de schuur (duplo en knutselspullen) vind je genoeg speelgoed en boekjes. In de schuur ligt ook buitenspeelgoed en strandspullen: thermopakjes voor het zwemmen in zee (twee maten), een strandkleed, parasol en windscherm. Pak vooral wat je fijn en handig vindt!"
+      p4: "<strong>Speelgoed &amp; strandspullen</strong> — in de woonkamer vind je bordspellen in de kast in de hoek. Op de kinderslaapkamers, in het speelhuisje en in de schuur (duplo en knutselspullen) vind je genoeg speelgoed en boekjes. In de schuur ligt ook buitenspeelgoed en strandspullen: thermopakjes voor het zwemmen in zee (twee maten), een strandkleed, parasol en windscherm. Pak vooral wat je fijn en handig vindt!"
     },
 
     afval: {
@@ -224,7 +225,7 @@ const TRANSLATIONS = {
 
     aankomst: {
       p1: "When you arrive, walk through the gate on the right-hand side of the house, where you'll find the key safe. You'll receive the exact location and access code for the key safe separately and personally from us, shortly before your arrival.",
-      p2: "Inside the key safe you'll find the key to the back door. This is the entrance we ourselves always use. The same key also works for the two French doors leading from the living room to the garden. When you arrive, you'll find a second, spare key on the table.",
+      p2: "Inside the key safe you'll find the keys to the front door and the back door. The back door is the entrance we ourselves always use; that key also works for the two French doors leading from the living room to the garden. When you arrive, you'll find a second, spare key on the table.",
       p3: "You can park for free in the street. If all the spots are taken, which mostly happens in the evening, we ourselves park in the large car park at the end of the street, on the right just before the railway. You'll also find several electric car charging points there."
     },
 
@@ -275,21 +276,22 @@ const TRANSLATIONS = {
     verwarming: {
       p1: "<strong>Thermostat</strong> — hangs in the living room, to the right of the sliding doors. You can read the temperature on the display and adjust it with the arrow keys.",
       p2: "<strong>Fans</strong> — every bedroom has a fan. In the children's rooms you'll find one with four buttons on the back for on/off and the different settings.",
-      p3: "In the master bedroom there's a <strong>Duux Whisper 3</strong>. You can control it using the buttons on the base or the remote control on the bedside table. It has 26 speed settings (adjustable via the dial on the base), a natural wind mode that mimics an outdoor breeze, and a timer function of up to 12 hours. The fan can rotate both horizontally and vertically for optimal air distribution."
+      p3: "In the master bedroom there's a <strong>Duux Whisper 3</strong>. You can control it using the buttons on the base or the remote control on the bedside table. It has 26 speed settings (adjustable via the dial on the base), a natural wind mode that mimics an outdoor breeze, and a timer function of up to 12 hours. The fan can rotate both horizontally and vertically for optimal air distribution.",
+      p4: "<strong>Fireplace</strong> — there's a gas fireplace in the living room. Please note: the fireplace gets very hot, including the glass — don't touch it. In summer it heats up quickly, so it's often too warm to use. The remote control is on top of the mantelpiece. Hold the on/off button down for a few seconds until the fireplace beeps; it then takes a few more seconds before the flame appears."
     },
 
     tuin: {
-      p1: "<strong>Plants</strong> — if you notice a plant needs water, feel free to water it. There's a watering can in or next to the shed. The bamboo at the back right can always use a bit of water. Don't get around to watering? No problem at all.",
+      p1: "<strong>Plants</strong> — if you notice a plant needs water, feel free to water it. There's a watering can in or next to the shed. Don't get around to watering? No problem at all.",
       p2: "<strong>Outdoor lighting</strong> — the lights on the side of the house, by the front door and on the shed work automatically and switch on and off by themselves. You control the ambient lighting along the garden yourself: in the shed, right next to the entrance on the left, plug it into the socket to turn the lights on and unplug it to turn them off.",
       p3: "<strong>Garden furniture</strong> — on the veranda you'll find a full dining set for eating outside, and a white sofa to enjoy the evening sun, with cushions and blankets for outdoor use. In bad weather everything stays dry, so you don't need to bring anything in. We do ask you to leave the white sofa in its place; if it gets a stain, please treat it quickly with the stain remover from the kitchen. You're free to move and use the rest of the garden furniture. The garden also has a playhouse with extra toys for children.",
-      p4: "<strong>Bikes</strong> — all the bikes are available, the keys are on the table when you arrive. There's an electric women's bike with a child seat on the back: activate it with the button on the top right of the control panel and set the assistance level with the + and - buttons. The range is around 15–20 km, so charge the battery before you leave (the charger is on the right on the workbench in the shed — it's best to plug it in the evening before, as it charges slowly). There's also a regular women's bike, a men's bike, a mountain bike for children aged 7–12, and a girl's bike for children aged 5–7."
+      p4: "<strong>Bikes</strong> — all the bikes are available, the keys are on the table when you arrive. There's an electric women's bike with a child seat on the back: activate it with the button on the top right of the control panel and set the assistance level with the + and - buttons. The range is around 15–20 km, so charge the battery before you leave (the charger is on the right on the workbench in the shed — it's best to plug it in the evening before, as it charges slowly). There's also a regular women's bike, a men's bike, a mountain bike for children aged 7–12, and a girl's bike for children aged 4–6."
     },
 
     praktisch: {
       p1: "<strong>Fuse box</strong> — located in the hallway, to the right of the front door, in the white cabinet. Has a fuse tripped? The relevant black switch will be down — flip it back up to restore power to that circuit.",
       p2: "<strong>Cleaning supplies</strong> — are in the kitchen (middle drawer, at the bottom): cleaning products for the floor, kitchen and toilet, and a dustpan and brush. Please use whatever you need. You'll find a bucket and mop in the cellar.",
       p3: "<strong>Tools</strong> — in the shed, on the right, you'll find a large workbench with drawers. The top right-hand drawer holds a basic tool set.",
-      p4: "<strong>Toys &amp; beach gear</strong> — in the children's bedrooms, in the playhouse and in the shed (duplo and craft supplies) you'll find plenty of toys and books. The shed also has outdoor toys and beach gear: wetsuits for swimming in the sea (two sizes), a beach mat, parasol and windbreak. Feel free to take whatever you find useful and fun!"
+      p4: "<strong>Toys &amp; beach gear</strong> — in the living room you'll find board games in the corner cabinet. In the children's bedrooms, in the playhouse and in the shed (duplo and craft supplies) you'll find plenty of toys and books. The shed also has outdoor toys and beach gear: wetsuits for swimming in the sea (two sizes), a beach mat, parasol and windbreak. Feel free to take whatever you find useful and fun!"
     },
 
     afval: {
@@ -388,7 +390,7 @@ const TRANSLATIONS = {
 
     aankomst: {
       p1: "Bei deiner Ankunft gehst du durch die Tordurchfahrt an der rechten Seite des Hauses, dort findest du den Schlüsseltresor. Den genauen Standort und den Zugangscode des Schlüsseltresors bekommst du separat und persönlich von uns, kurz vor deiner Ankunft.",
-      p2: "Im Schlüsseltresor findest du den Schlüssel für die Hintertür. Das ist der Eingang, den wir selbst immer benutzen. Derselbe Schlüssel passt auch auf die beiden Terrassentüren vom Wohnzimmer zum Garten. Bei deiner Ankunft liegt auf dem Tisch außerdem ein zweiter Ersatzschlüssel.",
+      p2: "Im Schlüsseltresor findest du die Schlüssel für die Vordertür und die Hintertür. Die Hintertür ist der Eingang, den wir selbst immer benutzen; dieser Schlüssel passt auch auf die beiden Terrassentüren vom Wohnzimmer zum Garten. Bei deiner Ankunft liegt auf dem Tisch außerdem ein zweiter Ersatzschlüssel.",
       p3: "In der Straße kannst du kostenlos parken. Sollten alle Plätze belegt sein, was vor allem abends vorkommen kann, parken wir selbst immer auf dem großen Parkplatz am Ende der Straße, rechts vor der Bahnstrecke. Dort findest du auch mehrere Ladepunkte für Elektroautos."
     },
 
@@ -439,21 +441,22 @@ const TRANSLATIONS = {
     verwarming: {
       p1: "<strong>Thermostat</strong> — hängt im Wohnzimmer, rechts von den Schiebetüren. Die Temperatur liest du am Display ab und stellst sie mit den Pfeiltasten ein.",
       p2: "<strong>Ventilatoren</strong> — in jedem Schlafzimmer steht ein Ventilator. In den Kinderzimmern findest du einen mit vier Tasten auf der Rückseite für an/aus und die verschiedenen Stufen.",
-      p3: "Im Master-Schlafzimmer steht ein <strong>Duux Whisper 3</strong>. Diesen bedienst du über die Tasten am Fuß oder über die Fernbedienung auf dem Nachttisch. Er hat 26 Geschwindigkeitsstufen (einstellbar über den Drehregler am Fuß), eine natürliche Windstufe, die eine Brise im Freien nachahmt, und eine Timerfunktion bis zu 12 Stunden. Der Ventilator kann sich sowohl horizontal als auch vertikal drehen, für eine optimale Luftverteilung."
+      p3: "Im Master-Schlafzimmer steht ein <strong>Duux Whisper 3</strong>. Diesen bedienst du über die Tasten am Fuß oder über die Fernbedienung auf dem Nachttisch. Er hat 26 Geschwindigkeitsstufen (einstellbar über den Drehregler am Fuß), eine natürliche Windstufe, die eine Brise im Freien nachahmt, und eine Timerfunktion bis zu 12 Stunden. Der Ventilator kann sich sowohl horizontal als auch vertikal drehen, für eine optimale Luftverteilung.",
+      p4: "<strong>Kamin</strong> — im Wohnzimmer steht ein Gaskamin. Achtung: Der Kamin wird sehr heiß, auch das Glas — bitte nicht berühren. Im Sommer wird er schnell zu warm, um ihn zu benutzen. Die Fernbedienung liegt oben auf dem Kaminsims. Halte die An/Aus-Taste ein paar Sekunden gedrückt, bis der Kamin piept; danach dauert es noch ein paar Sekunden, bis die Flamme sichtbar wird."
     },
 
     tuin: {
-      p1: "<strong>Pflanzen</strong> — wenn du siehst, dass eine Pflanze Wasser braucht, gieße sie gerne. Im oder neben dem Schuppen steht eine Gießkanne. Der Bambus hinten rechts kann immer etwas Wasser gebrauchen. Gießt du nicht? Auch kein Problem.",
+      p1: "<strong>Pflanzen</strong> — wenn du siehst, dass eine Pflanze Wasser braucht, gieße sie gerne. Im oder neben dem Schuppen steht eine Gießkanne. Gießt du nicht? Auch kein Problem.",
       p2: "<strong>Außenbeleuchtung</strong> — die Beleuchtung an der Seite des Hauses, bei der Haustür und am Schuppen funktioniert automatisch und schaltet sich von selbst ein und aus. Die Stimmungsbeleuchtung entlang des Gartens bedienst du selbst: im Schuppen, direkt links am Eingang, steckst du den Stecker in die Steckdose, um das Licht anzuschalten, und ziehst ihn heraus, um es auszuschalten.",
       p3: "<strong>Gartenmöbel</strong> — auf der Veranda findest du eine vollständige Sitzecke, um auch draußen zu essen, sowie ein weißes Sofa, um die Abendsonne zu genießen, mit Kissen und Decken für draußen. Bei schlechtem Wetter bleibt alles trocken, du musst also nichts hereinholen. Wir bitten dich, das weiße Sofa an seinem Platz zu lassen; sollte ein Fleck entstehen, behandle ihn bitte schnell mit dem Fleckenmittel aus der Küche. Die übrigen Gartenmöbel darfst du frei verschieben und benutzen. Der Garten hat außerdem ein Spielhaus mit zusätzlichem Spielzeug für Kinder.",
-      p4: "<strong>Fahrräder</strong> — alle Fahrräder stehen zur Verfügung, die Schlüssel liegen bei deiner Ankunft auf dem Tisch. Es gibt ein elektrisches Damenrad mit Kindersitz hinten: Aktiviere es mit dem Knopf oben rechts am Bedienfeld und stelle mit den + und - Tasten die Unterstützungsstufe ein. Die Reichweite beträgt etwa 15–20 km, lade den Akku also vor der Abreise auf (das Ladegerät liegt rechts auf der Werkbank im Schuppen — schließe es am besten schon einen Abend vorher an, da es langsam lädt). Außerdem gibt es ein normales Damenrad, ein Herrenrad, ein Mountainbike für Kinder von 7–12 Jahren und ein Mädchenrad für Kinder von 5–7 Jahren."
+      p4: "<strong>Fahrräder</strong> — alle Fahrräder stehen zur Verfügung, die Schlüssel liegen bei deiner Ankunft auf dem Tisch. Es gibt ein elektrisches Damenrad mit Kindersitz hinten: Aktiviere es mit dem Knopf oben rechts am Bedienfeld und stelle mit den + und - Tasten die Unterstützungsstufe ein. Die Reichweite beträgt etwa 15–20 km, lade den Akku also vor der Abreise auf (das Ladegerät liegt rechts auf der Werkbank im Schuppen — schließe es am besten schon einen Abend vorher an, da es langsam lädt). Außerdem gibt es ein normales Damenrad, ein Herrenrad, ein Mountainbike für Kinder von 7–12 Jahren und ein Mädchenrad für Kinder von 4–6 Jahren."
     },
 
     praktisch: {
       p1: "<strong>Sicherungskasten</strong> — befindet sich im Flur, rechts von der Haustür, im weißen Schrank. Ist eine Sicherung herausgesprungen? Dann steht der betreffende schwarze Schalter unten — klick ihn nach oben, um die Gruppe wiederherzustellen.",
       p2: "<strong>Putzmittel</strong> — stehen in der Küche (mittlere Schublade, ganz unten): Reinigungsmittel für Boden, Küche und WC sowie Kehrblech und Handfeger. Benutze einfach, was du brauchst. Im Keller findest du Eimer und Wischmopp.",
       p3: "<strong>Werkzeug</strong> — im Schuppen findest du rechts eine große Werkbank mit Schubladen. In der obersten rechten Schublade liegt ein einfaches Werkzeug-Set.",
-      p4: "<strong>Spielzeug &amp; Strandsachen</strong> — in den Kinderzimmern, im Spielhaus und im Schuppen (Duplo und Bastelsachen) findest du genug Spielzeug und Bücher. Im Schuppen liegen außerdem Außenspielzeug und Strandsachen: Neoprenanzüge zum Schwimmen im Meer (zwei Größen), eine Strandmatte, ein Sonnenschirm und ein Windschutz. Nimm einfach mit, was du praktisch und schön findest!"
+      p4: "<strong>Spielzeug &amp; Strandsachen</strong> — im Wohnzimmer findest du Brettspiele im Eckschrank. In den Kinderzimmern, im Spielhaus und im Schuppen (Duplo und Bastelsachen) findest du genug Spielzeug und Bücher. Im Schuppen liegen außerdem Außenspielzeug und Strandsachen: Neoprenanzüge zum Schwimmen im Meer (zwei Größen), eine Strandmatte, ein Sonnenschirm und ein Windschutz. Nimm einfach mit, was du praktisch und schön findest!"
     },
 
     afval: {
